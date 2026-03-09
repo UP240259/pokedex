@@ -14,7 +14,7 @@ export default function PokemoCard(props: PokemonCardProps) {
   const pokemonImageURL = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
   return (
     <Pressable
-      onPress={() => router.push("/pokemonDetails")}
+      onPress={() => router.push(`/pokemon/${props.name}`)}
       style={({ pressed }) => [
         styles.Pressable,
         pressed && {
